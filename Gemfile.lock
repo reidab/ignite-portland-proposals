@@ -148,6 +148,8 @@ GEM
       ruby-openid (>= 2.1.8)
     rack-test (0.6.2)
       rack (>= 1.0)
+    rack-utf8_sanitizer (1.2.1)
+      rack (~> 1.0)
     rails (4.0.2)
       actionmailer (= 4.0.2)
       actionpack (= 4.0.2)
@@ -226,6 +228,7 @@ DEPENDENCIES
   omniauth-persona
   open_conference_ware (~> 1.0.0.pre)!
   puma
+  rack-utf8_sanitizer
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc

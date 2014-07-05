@@ -13,6 +13,9 @@ gem 'open_conference_ware', '~> 1.0.0.pre', git: 'https://github.com/osbridge/op
 gem 'omniauth-openid'
 gem 'omniauth-persona'
 
+# Clean up invalid UTF8 characters in request URI and headers.
+gem 'rack-utf8_sanitizer'
+
 # Set up New Relic for performance monitoring
 gem 'newrelic_rpm'
 

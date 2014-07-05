@@ -21,5 +21,8 @@ module IgnitePortland
     # config.i18n.default_locale = :de
 
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    # Clean up invalid UTF8 characters in request URI and headers.
+    config.middleware.insert 0, Rack::UTF8Sanitizer
   end
 end
