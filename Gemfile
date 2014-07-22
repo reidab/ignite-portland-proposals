@@ -16,6 +16,9 @@ gem 'omniauth-persona'
 # Clean up invalid UTF8 characters in request URI and headers.
 gem 'rack-utf8_sanitizer'
 
+# Catch and handle Rack errors
+gem 'rack-robustness'
+
 # Set up New Relic for performance monitoring
 gem 'newrelic_rpm'
 
