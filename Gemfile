@@ -12,6 +12,12 @@ gem 'open_conference_ware', '~> 1.0.0.pre', git: 'https://github.com/osbridge/op
 # Allow OpenID and Persona authentication
 gem 'omniauth-openid'
 gem 'omniauth-persona'
+gem 'omniauth-github'
+gem 'omniauth-twitter'
+gem "omniauth-google-oauth2"
+
+# Assets
+gem 'font-awesome-rails'
 
 # Clean up invalid UTF8 characters in request URI and headers.
 gem 'rack-utf8_sanitizer'

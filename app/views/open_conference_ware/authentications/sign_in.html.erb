@@ -1,0 +1,40 @@
+<h2>Sign in using any of the following services:</h2>
+
+<div id="sign_in_buttons">
+  <%
+    add_javascript(javascript_include_tag "https://login.persona.org/include.js")
+    run_when_dom_is_ready <<-JS
+      $('#persona_form .persona-button').click(function() {
+        personaLogin();
+        return false;
+      });
+    JS
+  %>
+
+  <div class="auth-provider">
+    <a class="btn btn-social" href="<%= auth_path(:twitter) %>">
+      <i class="fa fa-twitter"></i> Sign in with Twitter
+    </a>
+  </div>
+  <div class="auth-provider">
+    <a class="btn btn-social" href="<%= auth_path(:google_oauth2) %>">
+      <i class="fa fa-google"></i> Sign in with Google
+    </a>
+  </div>
+  <div class="auth-provider">
+    <a class="btn btn-social" href="<%= auth_path(:github) %>">
+      <i class="fa fa-github"></i> Sign in with GitHub
+    </a>
+  </div>
+  <div class="auth-provider">
+    <a class="btn btn-social" href="<%= auth_path(:open_id) %>">
+      <i class="fa fa-openid"></i> Sign in with OpenID
+    </a>
+  </div>
+  <div class="auth-provider persona">
+    <form id='persona_form' action='<%= auth_callback_path(:persona) %>'>
+      <input type='hidden' name='assertion'/>
+      <a class="persona-button"><span>Sign in with Persona</span></a>
+    </form>
+  </div>
+</div>
