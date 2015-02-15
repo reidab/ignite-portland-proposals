@@ -48,7 +48,7 @@ OpenConferenceWare.configure do |config|
   # Many features of OpenConferenceWare can be toggled via these settings
 
   # Can people create proposals without logging in?
-  config.have_anonymous_proposals = true
+  config.have_anonymous_proposals = false
 
   # Do proposals have excerpts?
   config.have_proposal_excerpts = false
