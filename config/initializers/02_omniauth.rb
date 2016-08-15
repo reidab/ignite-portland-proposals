@@ -47,7 +47,7 @@ Rails.application.config.middleware.use OpenConferenceWare::OmniAuthBuilder do
   # Persona
   # add 'omniauth-persona' to Gemfile and uncomment to enable Persona
   #
-  provider :persona
+  # provider :persona
 
   # Developer
   # Used to provide easy authentication during development
